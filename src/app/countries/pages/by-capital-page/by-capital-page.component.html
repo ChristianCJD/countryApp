@@ -6,7 +6,7 @@
         <!-- SearchBox -->
         <shared-search-box  
             (onValue)="searchByCapital( $event )"                            
-            placeholder="this is a placeholder"></shared-search-box>
+            placeholder="Type a capital"></shared-search-box>
     </div>
 </div>
 
@@ -14,10 +14,6 @@
     <div class="col">
         <hr>
         <!-- Results -->
-        <ul>
-            <li *ngFor="let country of countries">
-                {{ country.capital }} - {{ country.population }}
-            </li>
-        </ul>
+        <countries-table [countries]="countries"></countries-table>
     </div>
 </div>

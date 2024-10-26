@@ -1,1 +1,19 @@
-<p>by-region-page works!</p>
+<h2>Region</h2>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- SarchBox -->
+         <shared-search-box
+            (onValue)="searchbyRegion( $event )"
+            placeholder="Type a region"></shared-search-box>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col">
+        <hr>
+        <!-- Results -->
+         <countries-table [countries]="region"></countries-table>
+    </div>
+</div>
